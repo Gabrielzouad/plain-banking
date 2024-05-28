@@ -34,6 +34,7 @@ const AuthForm = ({ type }: { type: string }) => {
       // sign up with appwrite & create plaid token
       if (type === 'sign-up') {
         const newUser = await signUp(values);
+
         setUser(newUser);
       }
       // sign in with appwrite
@@ -131,7 +132,7 @@ const AuthForm = ({ type }: { type: string }) => {
                       control={form.control}
                       name='dateOfBirth'
                       label='Date of Birth'
-                      placeholder='YYYY-MM-DD'
+                      placeholder='DD-MM-YYYY'
                     />
                     <CustomInput
                       control={form.control}
